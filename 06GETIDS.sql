@@ -1,0 +1,9 @@
+BEGIN
+FOR i IN 1..190000 LOOP
+    INSERT INTO ids (ids.EMPLOYEE_ID, ids.FIRST_NAME_ID, ids.LAST_NAME_id, ids.J_ID)
+    VALUES (i,DBMS_RANDOM.value(1,5163),DBMS_RANDOM.value(1,1000), TRUNC(DBMS_RANDOM.value(2,20)));
+END LOOP;
+
+update ids set ids.J_ID=1 where ids.EMPLOYEE_ID=5;
+
+END;
